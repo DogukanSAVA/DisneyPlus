@@ -19,9 +19,9 @@ const [session] = useSession();
    {!Session? (
      <Hero/>
    ): (
-         <main>
+      <main>
               <Slider/>
-          </main>
+        </main>
 
    )}
     </div>
