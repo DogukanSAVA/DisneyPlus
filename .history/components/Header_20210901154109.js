@@ -15,7 +15,7 @@ function Header() {
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 md:px-12 h-[72px]">
       <Image
-        src="/image/logo.svg"
+        src="/images/logo.svg"
         alt=""
         width={80}
         height={80}
