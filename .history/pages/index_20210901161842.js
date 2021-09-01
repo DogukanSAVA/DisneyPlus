@@ -1,12 +1,9 @@
-import { getSession, useSession } from 'next-auth/client';
 import Head from 'next/head'
 import Header from '../components/Header'
-import Hero from '../Hero'
 
+export default function Home() {
 
-export default function Home({Session}) {
-
-const [session] = useSession();
+const [session] = use
 
   return (
     <div className="">
@@ -15,13 +12,7 @@ const [session] = useSession();
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-   <Header/>
-   {!Session? (
-     <Hero/>
-   ): (
-<main>APP</main>
-
-   )}
+   <Header></Header>
     </div>
   )
 }

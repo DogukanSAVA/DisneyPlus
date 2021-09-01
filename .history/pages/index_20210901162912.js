@@ -1,7 +1,7 @@
 import { getSession, useSession } from 'next-auth/client';
 import Head from 'next/head'
 import Header from '../components/Header'
-import Hero from '../Hero'
+import Hero from '..'
 
 
 export default function Home({Session}) {

@@ -5,7 +5,7 @@ import {
   PlusIcon,
   StarIcon,
 } from "@heroicons/react/solid";
-import { getSession, signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 
 function Header() {
@@ -70,3 +70,4 @@ function Header() {
 
 export default Header;
 
+export async function getServerStatus;

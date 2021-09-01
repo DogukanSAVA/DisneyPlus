@@ -70,3 +70,8 @@ function Header() {
 
 export default Header;
 
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  
+}

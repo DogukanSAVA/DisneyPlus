@@ -1,10 +1,8 @@
-import { getSession, useSession } from 'next-auth/client';
+import { useSession } from 'next-auth/client';
 import Head from 'next/head'
 import Header from '../components/Header'
-import Hero from '../Hero'
 
-
-export default function Home({Session}) {
+export default function Home({session}) {
 
 const [session] = useSession();
 
@@ -16,12 +14,9 @@ const [session] = useSession();
       </Head>
 
    <Header/>
-   {!Session? (
+   {!session? (
      <Hero/>
-   ): (
-<main>APP</main>
-
-   )}
+   ):}
     </div>
   )
 }
