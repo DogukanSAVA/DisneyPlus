@@ -1,12 +1,29 @@
 import Image from "next/image";
-import {HomeIcon, PlusIcon, SearchIcon, StarIcon } from "@heroicons/react/solid";
-import {signIn} from "next-auth/client";
+import {
+  HomeIcon,
+  SearchIcon,
+  PlusIcon,
+  StarIcon,
+} from "@heroicons/react/solid";
+import { signIn, signOut, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 
 function Header() {
-          return (
-                    <div className="sticky bg-[#040714] top-0 z[1000] flex items-center px-10 h-[72px] md:px-12">
-                              <Image src="/image/logo.svg" width={80} height={80} className="cursor-pointer" />
-                              <div className="hidden ml-10 md:flex items-center space-x-6">
+  const [session] = useSession();
+  const router = useRouter();
+
+  return (
+    <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 md:px-12 h-[72px]">
+      <Image
+        src="/image/logo.svg"
+        alt=""
+        width={80}
+        height={80}
+        className="cursor-pointer"
+        onClick={() => router.push("/")}
+      />
+      {session && (
+        <div className="hidden ml-10 md:flex items-center space-x-6">
           <a className="header-link group">
             <HomeIcon className="h-4" />
             <span className="span">Home</span>
@@ -24,20 +41,18 @@ function Header() {
             <span className="span">Originals</span>
           </a>
           <a className="header-link group">
-            <img src="/image/movie-icon.svg" alt="" className="h-5" />
+            <img src="/images/movie-icon.svg" alt="" className="h-5" />
             <span className="span">Movies</span>
           </a>
           <a className="header-link group">
-            <img src="/image/series-icon.svg" alt="" className="h-5" />
+            <img src="/images/series-icon.svg" alt="" className="h-5" />
             <span className="span">Series</span>
           </a>
         </div>
-        <button className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition-all duration-200" onClick={signIn}>Login</button>
-                    </div>
-                         
-                      
-                  
-          );
+      )}
+     
+    </header>
+  );
 }
 
 export default Header;

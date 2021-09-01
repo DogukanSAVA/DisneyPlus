@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
+import { FirebaseAdapter } from "@next-auth/firebase-adapter";
+
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
