@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Slider() {
   return (
-    <section className="relative mt-7 shadow-2xl max-w-screen-2xl mx-auto">
+    <section className="relative mt-5 shadow-2xl max-w-screen-2xl mx-auto">
       <Carousel
         autoPlay
         infiniteLoop
@@ -23,7 +23,7 @@ function Slider() {
         <img loading="lazy" src="/image/slider-3.jpg" alt="" />
        </div>
        <div>
-        <img loading="lazy" src="/image/slider-4.jpeg" alt="" />
+        <img loading="lazy" src="/image/slider-4.jpg" alt="" />
        </div>
       </Carousel>
     </section>

@@ -4,6 +4,7 @@ import Brands from "../components/brand";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
+import Brands from "../components/brand";
 
 export default function Home({Session}) {
 

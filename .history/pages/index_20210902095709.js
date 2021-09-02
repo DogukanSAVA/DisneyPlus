@@ -1,6 +1,5 @@
 import { getSession, useSession } from "next-auth/client";
 import Head from "next/head";
-import Brands from "../components/brand";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
@@ -23,17 +22,19 @@ return (
         <Slider />
         <Brands />
    
+
+          results={top_ratedMovies}
+          title="Top Rated Movies"
+        />
+
+        <ShowsCollection results={top_ratedShows} title="Top Rated Shows" />
       </main>
     )}
   </div>
 );
 }
 
-export async function getServerSideProps
-(context) {
-  const session = await getSession(context);
-
-  return{
+  return {
     props: {
       session,
     },

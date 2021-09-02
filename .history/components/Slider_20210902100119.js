@@ -23,8 +23,9 @@ function Slider() {
         <img loading="lazy" src="/image/slider-3.jpg" alt="" />
        </div>
        <div>
-        <img loading="lazy" src="/image/slider-4.jpeg" alt="" />
+        <img loading="lazy" src="/image/slider-3.jpg" alt="" />
        </div>
+      
       </Carousel>
     </section>
   );

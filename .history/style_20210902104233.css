@@ -19,6 +19,6 @@
   }
 }
 
-.brand {
-  @apply flex relative w-52 h-32 sm:w-64 sm:h-36 border-[3px] border-[#f9f9f9] border-opacity-10 rounded-lg cursor-pointer shadow-xl overflow-hidden  hover:border-opacity-80 hover:shadow-2xl transform hover:scale-105 transition duration-300;
+.brand{
+  @apply flex relative w-52 h-32 sm:
 }
