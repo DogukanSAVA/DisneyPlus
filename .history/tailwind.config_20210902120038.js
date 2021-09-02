@@ -4,7 +4,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: { backgroundImage: theme => ({
-      "home": "url('/image/background.png')",
+      'hero-pattern': "url('/img/hero-pattern.svg')",
+      'footer-texture': "url('/img/footer-texture.png')",
      })},
     FontFamily:{
       body: ["Montserrat" , "sans-serif"],

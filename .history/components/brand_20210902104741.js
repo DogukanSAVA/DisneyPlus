@@ -47,7 +47,7 @@ function Brands() {
           playsInline
           className="hidden group-hover:inline rounded-lg object-cover"
         >
-          <source src="/videos/star-wars.mp4" type="video/mp4" />
+          <source src="/video/star-wars.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -63,7 +63,7 @@ function Brands() {
           playsInline
           className="hidden group-hover:inline rounded-lg object-cover"
         >
-          <source src="/videos/national-geographic.mp4" type="video/mp4" />
+          <source src="/video/national-geographic.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
