@@ -7,6 +7,27 @@ import Slider from "../components/Slider";
 export default function Home({Session}) {
 
 const [session] = useSession();
+
+  return (
+    <div>
+      <Head>
+        <title>Disney</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+   <Header/>
+   {!Session? (
+     <Hero/>
+   ): (
+    <main className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
+    <Slider/>
+          </main>
+
+   )}
+    </div>
+  )
+}
+
 return (
   <div>
     <Head>
@@ -19,13 +40,12 @@ return (
       <Hero />
     ) : (
       <main className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
-        <Slider />
-        </main>
-        
+        <Slider />      </main>
     )}
   </div>
 );
 }
+
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
