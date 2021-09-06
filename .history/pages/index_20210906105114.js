@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import ShowsCollection from "../components/ShowsCollection";
-import { CollectionIcon } from "@heroicons/react/solid";
 
 export default function Home({
   popularMovies,
@@ -36,11 +35,7 @@ export default function Home({
           <MoviesCollection results={popularMovies} title="Popular Movies" />
           <ShowsCollection results={popularShows} title="Popular Shows" />
 
-          <MoviesCollection
-            results={top_ratedMovies}
-            title="Top Rated Movies"
-          />
-          <ShowsCollection results={top_ratedShows} title="Top Rated Shows" />
+      <Col
         </main>
       )}
     </div>

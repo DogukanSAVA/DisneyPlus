@@ -1,5 +1,5 @@
 import Image from "next/dist/client/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/";
 
 function MovieThumbnail({result}) {
           const BASE_URL = "https://image.tmdb.org/t/p/original/";

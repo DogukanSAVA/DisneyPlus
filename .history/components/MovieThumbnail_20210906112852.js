@@ -1,4 +1,3 @@
-import Image from "next/dist/client/image";
 import { useRouter } from "next/router";
 
 function MovieThumbnail({result}) {
