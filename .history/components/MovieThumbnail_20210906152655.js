@@ -17,7 +17,7 @@ function MovieThumbnail({ result }) {
         }
         width={330}
         height={210}
-        objectFit="cover"
+       objectFit="cover"
         className="rounded-lg"
       />
     </div>
