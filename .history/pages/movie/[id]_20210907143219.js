@@ -17,8 +17,8 @@ function Movie({ result }) {
       </Head> 
       <Header/>
    {!session ? <Hero /> : 
-   <section className="relative z-50">
-             <div className="relative min-h-[calc(100vh-72px)]">
+   <section>
+             <div>
                        <Image
                        src={
                               `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
@@ -27,9 +27,6 @@ function Movie({ result }) {
                             layout="fill"
                             objectFit="cover"
                             />    
-             </div>
-             <div>
-                       <h1>{result.title || result.original_name}</h1>
              </div>
    </section> }
 </div>

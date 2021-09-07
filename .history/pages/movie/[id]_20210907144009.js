@@ -29,7 +29,7 @@ function Movie({ result }) {
                             />    
              </div>
              <div>
-                       <h1>{result.title || result.original_name}</h1>
+                       <h1>{result</h1>
              </div>
    </section> }
 </div>
