@@ -17,25 +17,7 @@ function Movie({ result }) {
       </Head> 
       <Header/>
    {!session ? <Hero /> : 
-   <section className="relative z-50">
-             <div className="relative min-h-[calc(100vh-72px)]">
-                       <Image
-                       src={
-                              `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
-                              `${BASE_URL}${result.poster_path}`
-                            }
-                            layout="fill"
-                            objectFit="cover"
-                            />    
-             </div>
-             <div>
-                       <h1>{result.title || result.original_name}</h1>
-             </div>
-   </section> }
-</div>
-          );
-}
-
+   
 export default Movie
 
 export async function getServerSideProps(context) {
@@ -48,7 +30,7 @@ const session = await getSession(context);
 return {
           props:{
                     session,
-                    result:request,
+                    result:request, 
           },
 };
 }

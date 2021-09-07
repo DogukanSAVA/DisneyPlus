@@ -28,9 +28,11 @@ function Movie({ result }) {
                             objectFit="cover"
                             />    
              </div>
-             <div>
-                       <h1>{result.title || result.original_name}</h1>
-             </div>
+             <div className="">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+              {result.title || result.original_name}
+            </h1> 
+            </div>
    </section> }
 </div>
           );
@@ -48,7 +50,7 @@ const session = await getSession(context);
 return {
           props:{
                     session,
-                    result:request,
+                    result:request, 
           },
 };
 }

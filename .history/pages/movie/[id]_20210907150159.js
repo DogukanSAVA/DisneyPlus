@@ -18,19 +18,20 @@ function Movie({ result }) {
       <Header/>
    {!session ? <Hero /> : 
    <section className="relative z-50">
-             <div className="relative min-h-[calc(100vh-72px)]">
-                       <Image
-                       src={
-                              `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
-                              `${BASE_URL}${result.poster_path}`
-                            }
-                            layout="fill"
-                            objectFit="cover"
-                            />    
-             </div>
-             <div>
-                       <h1>{result.title || result.original_name}</h1>
-             </div>
+          <div className="relative min-h-[calc(100vh-72px)]">
+            <Image
+              src={
+                `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
+                `${BASE_URL}${result.poster_path}`
+              }
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className="absolute inset-y-28 md:inset-y-auto md:bottom-10 inset-x-4 md:inset-x-12 space-y-6 z-50">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+              {result.title || result.original_name}
+            </h1>
    </section> }
 </div>
           );
@@ -48,7 +49,7 @@ const session = await getSession(context);
 return {
           props:{
                     session,
-                    result:request,
+                    result:request, 
           },
 };
 }

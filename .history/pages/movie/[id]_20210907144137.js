@@ -28,7 +28,7 @@ function Movie({ result }) {
                             objectFit="cover"
                             />    
              </div>
-             <div>
+             <div className="absolute ">
                        <h1>{result.title || result.original_name}</h1>
              </div>
    </section> }
