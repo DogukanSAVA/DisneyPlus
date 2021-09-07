@@ -68,7 +68,7 @@ console.log(result);
               {Math.floor(result.runtime / 60)}h {result.runtime % 60}m •{" "}
               {result.genres.map((genre) => genre.name + " ")}{" "}
             </p>
-            <h4>{result.overview}</h4>
+            <h4>{result.over}</h4>
              </div1>
    </section> }
 </div>
