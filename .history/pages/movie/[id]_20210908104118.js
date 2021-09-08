@@ -6,19 +6,16 @@ import Image from "next/dist/client/image";
 import { useEffect, useState } from "react";
 import { PlusIcon, XIcon } from "@heroicons/react/solid";
 import ReactPlayer from "react-player";
-import {useRouter} from "next/router";
 
 function Movie({ result }) {
 console.log(result);          
           const[session] = useSession();
           const BASE_URL = "https://image.tmdb.org/t/p/original/";
           const [showPlayer, setShowPlayer] = useState(false);
-          const router = useRouter();
-
           
           useEffect(() => {
               if(!session){
-                router.push("/")
+                
               }
           },[])
 

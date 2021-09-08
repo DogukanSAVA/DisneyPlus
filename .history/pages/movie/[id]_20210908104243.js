@@ -13,12 +13,12 @@ console.log(result);
           const[session] = useSession();
           const BASE_URL = "https://image.tmdb.org/t/p/original/";
           const [showPlayer, setShowPlayer] = useState(false);
-          const router = useRouter();
+          const 
 
           
           useEffect(() => {
               if(!session){
-                router.push("/")
+                router.push()
               }
           },[])
 

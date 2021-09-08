@@ -3,29 +3,15 @@ import Head from "next/dist/shared/lib/head";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Image from "next/dist/client/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PlusIcon, XIcon } from "@heroicons/react/solid";
-import ReactPlayer from "react-player";
-import {useRouter} from "next/router";
 
 function Movie({ result }) {
 console.log(result);          
           const[session] = useSession();
           const BASE_URL = "https://image.tmdb.org/t/p/original/";
           const [showPlayer, setShowPlayer] = useState(false);
-          const router = useRouter();
 
-          
-          useEffect(() => {
-              if(!session){
-                router.push("/")
-              }
-          },[])
-
-
-          const index = result.videos.results.findIndex(
-            (element) => element.type === "Trailer"
-          );
           return (
                     <div>
           <Head>
@@ -100,16 +86,9 @@ console.log(result);
                 <XIcon className="h-5"/>  
                 </div> 
               </div>
-              <div className="relative pt-[56.25%]">
-              <ReactPlayer
-                url={`https://www.youtube.com/watch?v=${result.videos?.results[index]?.key}`}
-                width="100%"
-                height="100%"
-                style={{ position: "absolute", top: "0", left: "0" }}
-               // controls={true}
-                playing={showPlayer}
-              />
-            </div>
+              <div className="relative pt-[56.]"> 
+
+              </div>
             </div>
    </section> }
 </div>
