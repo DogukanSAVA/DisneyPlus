@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Image from "next/dist/client/image";
 import { useState } from "react";
-import { PlusIcon, XIcon } from "@heroicons/react/solid";
+import { PlusIcon } from "@heroicons/react/solid";
 
 function Movie({ result }) {
 console.log(result);          
@@ -72,21 +72,10 @@ console.log(result);
              </div>
              {/* Bg Overlay */}
              {showPlayer && (
-               <div className="absolute inset-0 bg-black opacity-50 h-full w-full z-50"></div>
-             )}
-             <div className={`absolute top-3 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
-              showPlayer ? "opacity-100 z-50" : "opacity-0"
-            }`}>
-            {/* PopUp*/}
-              <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5">
-              <span className="font-semibold">Play Trailer</span>
+               <div className="absolute inset-0 bg-black opacity-50 h-full w-full">
 
-                <div className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"
-                onClick={() => setShowPlayer(false)}> 
-                <XIcon className="h-5"/>  
-                </div> 
-              </div>
-            </div>
+               </div>
+             )}
    </section> }
 </div>
           );

@@ -80,11 +80,11 @@ console.log(result);
             {/* PopUp*/}
               <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5">
               <span className="font-semibold">Play Trailer</span>
-
                 <div className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"
                 onClick={() => setShowPlayer(false)}> 
                 <XIcon className="h-5"/>  
                 </div> 
+               
               </div>
             </div>
    </section> }

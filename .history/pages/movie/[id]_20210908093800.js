@@ -77,14 +77,11 @@ console.log(result);
              <div className={`absolute top-3 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
               showPlayer ? "opacity-100 z-50" : "opacity-0"
             }`}>
-            {/* PopUp*/}
               <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5">
-              <span className="font-semibold">Play Trailer</span>
-
-                <div className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0F0F0F]"
-                onClick={() => setShowPlayer(false)}> 
+                <div className> 
                 <XIcon className="h-5"/>  
                 </div> 
+                <span className="font-semibold">Play Trailer</span>
               </div>
             </div>
    </section> }
