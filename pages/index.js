@@ -3,7 +3,6 @@ import Head from "next/head";
 import Brands from "../components/brand";
 import MoviesCollection from "../components/MoviesCollection";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import ShowsCollection from "../components/ShowsCollection";
 import { CollectionIcon } from "@heroicons/react/solid";

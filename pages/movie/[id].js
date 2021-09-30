@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import Hero from "../../components/Hero";
 import { PlusIcon, XIcon } from "@heroicons/react/solid";
 import ReactPlayer from "react-player/lazy";
+
 
 function Movie({ result }) {
   const [session] = useSession();
@@ -32,7 +32,7 @@ function Movie({ result }) {
       </Head>
       <Header />
       {!session ? (
-        <Hero />
+        <index />
       ) : (
         <section className="relative z-50">
           <div className="relative min-h-[calc(100vh-72px)]">
