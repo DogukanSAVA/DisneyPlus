@@ -80,7 +80,7 @@ function Show({ result }) {
               </div>
 
               <div className="rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60">
-                <img src="/images/group-icon.svg" alt="" />
+                <img src="/image/group-icon.svg" alt="" />
               </div>
             </div>
 
