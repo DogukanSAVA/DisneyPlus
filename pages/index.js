@@ -26,9 +26,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {!session ? (
-        <Hero />
-      ) : (
+      
         <main className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
           <Slider />
           <Brands />
@@ -41,7 +39,7 @@ export default function Home({
           />
           <ShowsCollection results={top_ratedShows} title="Top Rated Shows" />
         </main>
-      )}
+      
     </div>
   );
 }
